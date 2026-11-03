@@ -1,0 +1,11 @@
+
+# Environment
+.env
+
+# Go
+backend/bin/
+backend/tmp/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,72 @@
+/* Vehicle detail action buttons */
+.vehicle-detail-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.vehicle-detail-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vehicle-detail-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vehicle-toggle-button {
+  border: 1px solid transparent;
+}
+
+.vehicle-toggle-button.deactivate {
+  color: #dc2626;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.vehicle-toggle-button.deactivate:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+.vehicle-toggle-button.activate {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.vehicle-toggle-button.activate:hover:not(:disabled) {
+  background: #dcfce7;
+}
+
+.vehicle-detail-actions .vehicles-add-button {
+  min-height: 42px;
+}
+
+@media (max-width: 480px) {
+  .vehicle-detail-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vehicle-detail-actions .vehicles-add-button {
+    grid-column: 1 / -1;
+  }
+
+  .vehicle-detail-actions button {
+    width: 100%;
+  }
+}
